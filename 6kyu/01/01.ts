@@ -20,7 +20,7 @@
 // encryptThis "good" == "103doo"
 // encryptThis "hello world" == "104olle 119drlo" 
 
-const encryptThis = (str: string): string => {
+const _encryptThis = (str: string): string => {
     let word : string[] = str.split(" ");
     
     let res = word.map(e => {
@@ -37,5 +37,3 @@ const encryptThis = (str: string): string => {
 
 // convert 1st letter to binary
 // switched 2nd and last index of the string
-
-console.log(encryptThis("Hello"));
