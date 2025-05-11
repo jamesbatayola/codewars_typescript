@@ -18,22 +18,29 @@
 
 // encryptThis "Hello" == "72olle"
 // encryptThis "good" == "103doo"
-// encryptThis "hello world" == "104olle 119drlo" 
+// encryptThis "hello world" == "104olle 119drlo"
 
 const _encryptThis = (str: string): string => {
-    let word : string[] = str.split(" ");
-    
-    let res = word.map(e => {
-        const first = `${e.charCodeAt(0)}`;
+	let word: string[] = str.split(" ");
 
-        return e.length > 3 ? `${first}${e[e.length-1]}${e.slice(2, e.length -1)}${e[1]}` :
-        e.length === 3 ? `${first}${e[e.length-1]}${e[1]}` :
-        e.length === 2 ? `${first}${e[1]}` :
-        e.length === 1 ? first : ""; 
-    });
+	let res = word.map((e) => {
+		const first = `${e.charCodeAt(0)}`;
 
-    return res.join(" ");
-}
+		return e.length > 3
+			? `${first}${e[e.length - 1]}${e.slice(2, e.length - 1)}${e[1]}`
+			: e.length === 3
+			? `${first}${e[e.length - 1]}${e[1]}`
+			: e.length === 2
+			? `${first}${e[1]}`
+			: e.length === 1
+			? first
+			: "";
+	});
+
+	return res.join(" ");
+};
+
+console.log(_encryptThis("Hello"));
 
 // convert 1st letter to binary
 // switched 2nd and last index of the string
