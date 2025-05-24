@@ -4,10 +4,10 @@
 
 // The array will never be empty.
 
-function getAverage(marks:number[]):number{
-    return Math.round(marks.reduce((x, y) => x + y) / marks.length);
+function getAverage(marks: number[]): number {
+	return Math.round(marks.reduce((x, y) => x + y) / marks.length);
 }
 
-console.log(getAverage([2,2,2,2]));
-console.log(getAverage([1,2,3,4,5]));
-console.log(getAverage([1,1,1,1,1,1,1,2]));
+console.log(getAverage([2, 2, 2, 2]));
+console.log(getAverage([1, 2, 3, 4, 5]));
+console.log(getAverage([1, 1, 1, 1, 1, 1, 1, 2]));
