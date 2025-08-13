@@ -7,7 +7,6 @@
 // "This is another test" --> "This is rehtona test"
 
 export function spinWords(words: string): string {
-  //TODO Have fun :)
   const _words: string[] = words.split(" ");
 
   const res: string[] = _words.map((word) => {
@@ -27,3 +26,16 @@ export function spinWords(words: string): string {
 
 console.log(spinWords("Hey fellow warriors"));
 console.log(spinWords("This is another test"));
+
+// CLEVER VERSION
+
+export function _spinWords(words: string): string {
+  return words
+    .split(" ")
+    .map((el) => (el.length >= 5 ? reverse(el) : el))
+    .join(" ");
+}
+
+const _reverse = (str: string): string => {
+  return str.split("").reverse().join("");
+};
