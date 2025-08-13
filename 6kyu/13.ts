@@ -32,7 +32,7 @@ console.log(spinWords("This is another test"));
 export function _spinWords(words: string): string {
   return words
     .split(" ")
-    .map((el) => (el.length >= 5 ? reverse(el) : el))
+    .map((el) => (el.length >= 5 ? _reverse(el) : el))
     .join(" ");
 }
 
