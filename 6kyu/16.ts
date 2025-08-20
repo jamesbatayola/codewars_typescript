@@ -8,7 +8,7 @@
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
 export function toCamelCase(str: string): string {
-  const words: string[] = str.toLowerCase().split(/[-_]/g);
+  const words: string[] = str.split(/[-_]/g);
 
   let res = words[0];
 
