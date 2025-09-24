@@ -60,3 +60,23 @@ export const _dashatize = (num: number) =>
 		.replace(/([13579])/g, "-$1-")
 		.replace(/--/g, "-")
 		.replace(/^-|-$/g, "");
+
+/*
+
+Breaking down the regex
+
+/^-/ → ^- means a hyphen at the start of the string.
+
+^ anchors the match to the beginning of the string.
+
+- is a literal dash.
+
+|- → the pipe | is OR.
+
+-$ → -$ means a hyphen at the end of the string.
+
+- again is a literal dash.
+
+$ anchors the match to the end of the string.
+
+    */
