@@ -118,8 +118,12 @@ export function fruit(reels: string[][], spins: number[]): number {
 		if (map.has(item)) map.set(item, map.get(item) + 1);
 		else map.set(item, 1);
 	}
-	let isWild = false;
-	for (let each of map) {
-		if (each[0] === "wild" && each[1] === 1) isWild = true;
+	if() return 0
+	let containsWild = map.has("wild");
+	let itemScore = "";
+	for (let e of map) {
+		if (e[1] === 2 && containsWild) {
+
+		}
 	}
 }
